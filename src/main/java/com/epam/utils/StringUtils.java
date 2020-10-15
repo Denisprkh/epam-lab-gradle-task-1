@@ -1,5 +1,8 @@
 package com.epam.utils;
 
+import static org.apache.commons.lang3.StringUtils.*;
+
+
 public class StringUtils {
 
     private static final String MINUS_SIGN = "-";
@@ -7,7 +10,7 @@ public class StringUtils {
     private StringUtils(){}
 
     public static boolean isPositiveNumber(String number) {
-        return org.apache.commons.lang3.StringUtils.isNumeric(number) &&
-                !org.apache.commons.lang3.StringUtils.contains(number, MINUS_SIGN);
+        return isNumeric(number) &&
+                !contains(number, MINUS_SIGN);
     }
 }
